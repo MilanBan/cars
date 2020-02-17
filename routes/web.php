@@ -12,7 +12,6 @@
 */
 
 
-Route::get('/about', function () {
-    return view('about');
-});
-Route::get('/', 'CarsController@index');
+Route::get('/about', 'AboutController@index');
+Route::get('/cars', 'CarsController@index');
+Route::get('/cars/{id}', 'CarsController@show');

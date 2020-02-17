@@ -3,19 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Car;
 
 class CarsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+  
     public function index()
     {
         $cars = Car::all();
 
-        return view('welcome', compact('cars'));
+        return view('cars', compact('cars'));
     }
 
     /**
@@ -47,7 +44,9 @@ class CarsController extends Controller
      */
     public function show($id)
     {
-        //
+        $car = Car::find($id);
+
+        return view('single-car', compact('car'));
     }
 
     /**
