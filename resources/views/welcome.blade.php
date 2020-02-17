@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Welcome to Cars Project
+                    Welcome {{ $name }}
                 </div>
 
                 <div class="links">
